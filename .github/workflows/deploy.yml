@@ -3,11 +3,16 @@ name: Deploy To-Do App to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main # or 'main', depending on which branch you decided to deploy from
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions: # <--- ADD THIS BLOCK
+      contents: write # Allows the bot to write to the repository
+      pages: write # Allows the bot to deploy to GitHub Pages
+      id-token: write # Required for some OIDC configurations, good practice for Pages
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
