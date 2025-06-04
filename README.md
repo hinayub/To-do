@@ -28,3 +28,5 @@ AI tools used in each phase:
     I uses github action for deployment
 
 Links to key files:
+      Document: https://github.com/hinayub/To-do/tree/main/design
+      
